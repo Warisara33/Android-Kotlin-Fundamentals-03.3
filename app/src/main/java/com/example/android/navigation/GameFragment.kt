@@ -101,12 +101,12 @@ class GameFragment : Fragment() {
                     } else {
                         // We've won!  Navigate to the gameWonFragment.
                         view.findNavController()
-                                .navigate(R.id.action_gameFragment_to_gameWonFragment)
+                                .navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment())
                     }
                 } else {
                     // Game over!
                     view.findNavController().
-                    navigate(R.id.action_titleFragment_to_gameFragment)
+                    navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
                 }
             }
         }
